@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>予約一覧</title>
+  <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+  <link rel="icon" type="image/png" href="./favicon.ico">
+</head>
+<body class="hold-transition skin-blue sidebar-mini">
+<div class="wrapper">
+	<span class="logo-lg">やきにく予約管理システム</span>
+  <div class="float_right"><a href="reserve.html">新規予約</a></div>
+	<br />
+	<hr />
+	<form action="reserve_post.php" method="POST">
+		<table border="1">
+			<tr>
+				<td>
+					予約番号
+				</td>
+				<td>
+					お名前
+				</td>
+				<td>
+					電話番号
+				</td>
+				<td>
+					予約日
+				</td>
+				<td>
+					予約時刻
+				</td>
+				<td>
+					人数
+				</td>
+				<td>
+					状態
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<a href="reserve_edit.html">A-00000</a>
+				</td>
+				<td>
+					やきにくたろう
+				</td>
+				<td>
+					08012345678
+				</td>
+				<td>
+					2019-08-21
+				</td>
+				<td>
+					17:00
+				</td>
+				<td>
+					<div class="float_right">
+					2
+					</div>
+				</td>
+				<td>
+					来店待ち
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<a href="reserve_edit.html">A-00000</a>
+				</td>
+				<td>
+					やきにく女子会
+				</td>
+				<td>
+					08012349876
+				</td>
+				<td>
+					2019-08-22
+				</td>
+				<td>
+					19:00
+				</td>
+				<td>
+					<div class="float_right">
+					2
+					</div>
+				</td>
+				<td>
+					来店待ち
+				</td>
+      </tr>
+      <tr>
+				<td>
+					<a href="reserve_edit.html">A-00000</a>
+				</td>
+				<td>
+					やきにく実践塾オフ会
+				</td>
+				<td>
+					08012349876
+				</td>
+				<td>
+					2019-08-15
+				</td>
+				<td>
+					20:00
+				</td>
+				<td>
+					<div class="float_right">
+					8
+					</div>
+				</td>
+				<td>
+					来店待ち
+				</td>
+			</tr>
+		</table>
+	</form>
+</div>
+<!-- ./wrapper -->
+<style>
+  *{
+  padding: 0;
+  margin: 0;
+  }
+  body{
+    color: gray;
+    font-size: 24px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    margin: 36px;
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+	.logo-lg{
+    color:red ;
+    font-size: 40px;
+    font-weight:bold;
+	}
+  .w30{
+    height: 32px;
+    width: 40px;
+  }
+  .w100{
+    height: 32px;
+    width: 180px;
+  }
+	.float_right{
+	  float:right;
+	}
+	table{
+    border-collapse: collapse;
+    margin-top: 15px;
+  }
+  table td {/*table内のtdに対して*/
+    padding: 3px 10px;/*上下3pxで左右10px*/
+  }
+</style>
+​
+<script>
+</script>
+</body>
+</html>

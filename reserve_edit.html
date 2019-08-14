@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>予約編集</title>
+  <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+  <link rel="icon" type="image/png" href="./favicon.ico">
+</head>
+<body class="hold-transition skin-blue sidebar-mini">
+<div class="wrapper">
+	<span class="logo-lg">やきにく予約管理システム</span>
+	<div class="float_right"><a href="reserve_list.html">一覧</a></div>
+	<br />
+	<hr />
+	<form action="reserve_edit_post.php" method="POST">
+    <h3>予約編集</h3>
+    <ul class="form-contents">
+      <li class="form-layouts">
+		    <label for="phone_no">電話番号</label>
+		    09012345678
+      </li>
+      <li class="form-layouts">
+        <label for="client_name">お名前</label>
+        やきにくたろう　様
+      </li>
+      <li class="form-layouts">
+        <label for="reserve_date">予約日</label>
+        <input type="date" class="w100" id="reserve_date" name="reserve_date" placeholder="YYYY-MM-DD" value="">
+      </li>
+      <li class="form-layouts">
+        <label for="reserve_time">予約時刻</label>
+        <select class="w100" id="reserve_time" name="reserve_time">
+          <option value="">(選択)</option>
+          <option value="17:00">17時00分</option>
+          <option value="17:30">17時30分</option>
+          <option value="18:00">18時00分</option>
+          <option value="18:30">18時30分</option>
+          <option value="19:00">19時00分</option>
+          <option value="19:30">19時30分</option>
+          <option value="20:00">20時00分</option>
+          <option value="20:30">20時30分</option>
+          <option value="21:00">21時00分</option>
+          <option value="21:30">21時30分</option>
+          <option value="22:00">22時00分</option>
+          <option value="22:30">22時30分</option>
+        </select>
+      </li>
+      <li class="form-layouts">
+        <label for="quantity">大人</label>
+        <input type="text" class="w30" id="adults" name="quantity" placeholder="" value="">名様
+      </li>
+      <li class="form-layouts">
+        <label for="quantity">子供</label>
+        <input type="text" class="w30" id="children" name="quantity" placeholder="" value="">名様
+      </li>
+      <!-- <label for="quantity">人数</label>
+      <input type="text" class="w30" id="quantity" name="quantity" placeholder="" value="">人
+      <br /> -->
+      <li class="form-layouts">
+        <label>席タイプ</label>
+        <input type="radio" id="seat_type_0" name="seat_type" value="box"><label for="seat_type_0">ボックス席</label>
+        <input type="radio" id="seat_type_1" name="seat_type" value="counter"><label for="seat_type_1">カウンター</label>
+        <input type="radio" id="seat_type_2" name="seat_type" value="table"><label for="seat_type_2">テーブル席</label>
+        <input type="radio" id="seat_type_3" name="seat_type" value="none"><label for="seat_type_3">指定なし</label>
+      </li>
+      <li class="form-layouts">
+        <label>喫煙</label>
+        <input type="checkbox" id="seat_smoke_0" name="seat_smoke" value="0"><label for="seat_smoke_0">禁煙席</label>
+        <input type="checkbox" id="seat_smoke_1" name="seat_smoke" value="1"><label for="seat_smoke_1">喫煙席</label>
+        <input type="checkbox" id="seat_smoke_2" name="seat_smoke" value="2"><label id="none" for="seat_smoke_2">指定なし</label>
+      </li>
+      <li class="form-layouts">
+        <label>備考</label>
+        <textarea cols="50" rows="5" id="note" name="note"></textarea>
+      </li>
+      <br />
+      <li class="form-layouts">
+        <label>キャンセル</label>
+        <input type="checkbox" id="cancel" name="cancel" value="1"><label for="seat_smoke_0">キャンセルする</label>
+      </li>
+      <li class="form-layouts">
+        <label>理由</label>
+        <textarea cols="50" rows="5" id="cancel_note" name="cancel_note"></textarea>
+      </li>
+      <br />
+      <li class="form-layouts">
+        <label for="staff_code">スタッフコード</label>
+        <input type="text" class="w100" id="staff_code" name="staff_code" placeholder="A1201908" value="">
+      </li>
+		<input type="submit" id="btnSubmit" name="btnSubmit" value="変更する">
+		<br />
+	</form>
+</div>
+<!-- ./wrapper -->
+<style>
+  *{
+  padding: 0;
+  margin: 0;
+  }
+  body{
+    color: gray;
+    font-size: 24px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    margin: 36px;
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+  h3{
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
+  label{
+    width: 20%;
+  }
+  input{
+    font-size: 18px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    box-sizing: border-box;
+    padding: 5px;
+  }
+  select{
+    font-size: 18px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    padding: 5px;
+  }
+  textarea{
+    width: 40%;
+    font-size: 18px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    padding: 5px;
+    box-sizing: border-box;
+  }
+  input[type="submit"]{
+    margin: 20px;
+    margin-left: 0px;
+    height: 60px;
+    width: 130px;
+  }
+  input[type="reset"]{
+    margin: 20px;
+    height: 60px;
+    width: 130px;
+    background-color:lightyellow;
+  }
+  .wrapper{
+    max-width: 100%;
+  }
+  .logo-lg{
+    color:red ;
+    font-size: 40px;
+    font-weight:bold;
+  }
+  .w30{
+    height: 28px;
+    width: 40px;
+    text-align: center;
+  }
+  .w100{
+    height: 36px;
+    width: 40%;
+  }
+  .float_right{
+    float:right;
+  }
+  .form-layouts{
+    display: flex;
+    align-items: center;
+    justify-content:flex-start;
+    margin: 10px 0px;
+  }
+  #no_smoke{
+    color: darkolivegreen;
+  }
+  #smoke{
+    color: darkred;
+  }
+</style>
+​
+<script>
+</script>
+</body>
+</html>

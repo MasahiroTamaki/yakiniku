@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="reserve.css">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>予約管理</title>
+  <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+  <link rel="icon" type="image/png" href="./favicon.ico">
+</head>
+<body class="hold-transition skin-blue sidebar-mini">
+<div class="wrapper">
+	<span class="logo-lg">やきにく予約管理システム</span>
+  <div class="float_right"><a href="reserve_list.html">予約一覧</a></div>
+	<br />
+	<hr />
+	<form action="reserve_post.php" method="POST">
+    <h3>予約登録</h3>
+		<ul class="form-contents">
+      <li class="form-layouts">
+        <label for="phone_no">お電話番号</label>
+        <input type="tel" class="w100" id="phone_no" name="phone_no" placeholder="09012345678" value="">
+      </li>
+      <li class="form-layouts">
+        <label for="client_name">お名前（カナ）</label>
+        <input type="text" class="w100" id="client_name" name="client_name" placeholder="オナマエ" value="">
+      </li>
+      <li class="form-layouts">
+        <label for="reserve_date">ご来店日</label>
+        <input type="date" class="w100" id="reserve_date" name="reserve_date" placeholder="YYYY-MM-DD" value="">
+      </li>
+      <li class="form-layouts">
+      <label for="reserve_time">ご来店時刻</label>
+        <select class="w100" id="reserve_time" name="reserve_time">
+          <option value="">(選択)</option>
+          <option value="17:00">17時00分</option>
+          <option value="17:30">17時30分</option>
+          <option value="18:00">18時00分</option>
+          <option value="18:30">18時30分</option>
+          <option value="19:00">19時00分</option>
+          <option value="19:30">19時30分</option>
+          <option value="20:00">20時00分</option>
+          <option value="20:30">20時30分</option>
+          <option value="21:00">21時00分</option>
+          <option value="21:30">21時30分</option>
+          <option value="22:00">22時00分</option>
+          <option value="22:30">22時30分</option>
+        </select>
+      </li>
+      <li class="form-layouts">
+        <label for="quantity">大人</label>
+        <input type="text" class="w30" id="adults" name="quantity" placeholder="" value="">名様
+      </li>
+      <li class="form-layouts">
+        <label for="quantity">子供</label>
+        <input type="text" class="w30" id="children" name="quantity" placeholder="" value="">名様
+      </li>
+      <li class="form-layouts">
+        <label>席タイプ</label>
+        <input type="radio" id="seat_type_0" name="seat_type" value="box"><label for="seat_type_0">ボックス席</label>
+        <input type="radio" id="seat_type_1" name="seat_type" value="counter"><label for="seat_type_1">カウンター</label>
+        <input type="radio" id="seat_type_2" name="seat_type" value="table"><label for="seat_type_2">テーブル席</label>
+        <input type="radio" id="seat_type_3" name="seat_type" value="none"><label for="seat_type_3">指定なし</label>
+      </li>
+      <li class="form-layouts">
+        <label>喫煙</label>
+        <input type="checkbox" id="seat_smoke_0" name="seat_smoke" value="0"><label id="no_smoke" for="seat_smoke_0">禁煙席</label>
+        <input type="checkbox" id="seat_smoke_1" name="seat_smoke" value="1"><label id="smoke" for="seat_smoke_1">喫煙席</label>
+        <input type="checkbox" id="seat_smoke_2" name="seat_smoke" value="2"><label id="none" for="seat_smoke_2">指定なし</label>
+      </li>
+      <li class="form-layouts">
+        <label>備考</label>
+        <br />
+        <textarea name="bikou" id="bikou" cols="40" rows="5" placeholder="クーポン利用・アレルギー・サプライズ・子供イス等"></textarea>
+      </li>
+      <li class="form-layouts">
+        <label for="staff_code">スタッフコード</label>
+        <input type="text" class="w100" id="staff_code" name="staff_code" placeholder="A1201908" value="">
+      </li>
+    </ul>
+    <input type="submit" id="btnSubmit" name="btnSubmit" value="予約する">
+    <input type="reset" id="btnreset" name="btnreset" value="リセット">
+		<br />
+	</form>
+</div>
+<!-- ./wrapper -->
+<style>
+  
+</style>
+​
+<script>
+</script>
+</body>
+</html>
